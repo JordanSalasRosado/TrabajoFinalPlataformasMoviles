@@ -11,4 +11,5 @@
     <color name="unimaq_primary">#a91221</color>
     <color name="background">#eaf2ff</color>
     <color name="link">#006ffd</color>
+    <color name="gray">#808080</color>
 </resources>

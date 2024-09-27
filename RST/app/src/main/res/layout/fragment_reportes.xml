@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.reportes.ReportesFragment"
-    android:layout_marginBottom="60dp">
+    android:layout_marginBottom="60dp"
+    android:background="@color/white">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
@@ -56,7 +57,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button_login"
+            android:id="@+id/button_registrar_atencion"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="@string/registrar_atencion"

@@ -2,6 +2,7 @@ package com.unimaq.rst
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -33,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setLoginOnClickListener() {
-        val button = findViewById<TextView>(R.id.button_login)
+        val button = findViewById<Button>(R.id.button_login)
         button.setOnClickListener {
             val username =  findViewById<EditText?>(R.id.username).text.toString()
             val password = findViewById<EditText?>(R.id.password).text.toString()

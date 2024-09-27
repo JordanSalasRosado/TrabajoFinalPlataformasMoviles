@@ -12,6 +12,12 @@
         tools:layout="@layout/fragment_reportes" />
 
     <fragment
+        android:id="@+id/navigation_reportes_crear"
+        android:name="com.unimaq.rst.ui.reportes.CrearReporteFragment"
+        android:label="@string/title_reportes_crear"
+        tools:layout="@layout/fragment_crear_reporte" />
+
+    <fragment
         android:id="@+id/navigation_ubicaciones"
         android:name="com.unimaq.rst.ui.ubicaciones.UbicacionesFragment"
         android:label="@string/title_ubicaciones"

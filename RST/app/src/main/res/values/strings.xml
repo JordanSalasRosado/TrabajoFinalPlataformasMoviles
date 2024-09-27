@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">RST</string>
     <string name="title_reportes">Reportes</string>
+    <string name="title_reportes_crear">Crear Informe</string>
     <string name="title_ubicaciones">Ubicaciones</string>
     <string name="title_ajustes">Ajustes</string>
 
@@ -19,4 +20,25 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ver_text">Ver</string>
+    <string name="ver_historial_text">Ver Historial</string>
+    <string name="subir_informe_text">Subir Informe</string>
+    <string name="registro_atencion">Registro de Atención</string>
+    <string name="registro_atencion_subtitulo">Ingresa los datos de la atención brindada</string>
+    <string name="nro_solicitud">Nro Solicitud</string>
+    <string name="maquinaria">Maquinaria</string>
+    <string name="nro_serie">Nro Serie</string>
+    <string name="anho_fabricacion">Año Fabricación</string>
+    <string name="ultimo_mantenimiento">Último Mantenimiento</string>
+    <string name="ingrese_horometro">Ingrese Horómetro</string>
+    <string name="ingrese_horometro_hint">Ej. 1424.5</string>
+    <string name="ingrese_stir_2">Ingrese STIR-2</string>
+    <string name="ingrese_strir_2_hint">Ej. 45451255</string>
+    <string name="revision_hidraulica">Revisión Hidráulica</string>
+    <string name="revision_aceite">Revisión Aceite</string>
+    <string name="revision_calibracion">Revisión Calibración</string>
+    <string name="revision_neumaticos">Revisión Neumáticos</string>
+    <string name="ingrese_observaciones">Ingrese Observaciones</string>
+    <string name="ingrese_observaciones_hint">Observaciones Generales</string>
+    <string name="firma_tecnico">Firma Técnico</string>
+    <string name="firma_supervisor">Firma Supervisor</string>
 </resources>
