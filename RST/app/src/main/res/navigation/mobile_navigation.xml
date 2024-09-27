@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_reportes">
+
+    <fragment
+        android:id="@+id/navigation_reportes"
+        android:name="com.unimaq.rst.ui.reportes.ReportesFragment"
+        android:label="@string/title_reportes"
+        tools:layout="@layout/fragment_reportes" />
+
+    <fragment
+        android:id="@+id/navigation_ubicaciones"
+        android:name="com.unimaq.rst.ui.ubicaciones.UbicacionesFragment"
+        android:label="@string/title_ubicaciones"
+        tools:layout="@layout/fragment_ubicaciones" />
+
+    <fragment
+        android:id="@+id/navigation_ajustes"
+        android:name="com.unimaq.rst.ui.ajustes.AjustesFragment"
+        android:label="@string/title_ajustes"
+        tools:layout="@layout/fragment_ajustes" />
+</navigation>

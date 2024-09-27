@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">RST</string>
+    <string name="title_reportes">Reportes</string>
+    <string name="title_ubicaciones">Ubicaciones</string>
+    <string name="title_ajustes">Ajustes</string>
+
+    <string name="empty_text"> </string>
+    <string name="servicio_tecnico">Servicio Técnico</string>
+    <string name="username_hint">Usuario</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="forgot_password_text">Olvidaste tu clave?</string>
+    <string name="ingresar_text">Ingresar</string>
+    <string name="no_puede_ingresar_text">No puede ingresar?</string>
+    <string name="comuniquese_soporte_text">Comuníquese con Soporte</string>
+    <string name="ingreso_corporativo_text">O ingrese mediante correo corporativo</string>
+    <string name="gmail_button_text">G</string>
+    <string name="registrar_atencion">Registrar Nueva Atención</string>
+    <string name="atenciones_text">Atenciones realizadas</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ver_text">Ver</string>
+</resources>

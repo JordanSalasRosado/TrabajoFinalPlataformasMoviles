@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_reportes"
+        android:icon="@drawable/baseline_playlist_add_check_24"
+        android:title="@string/title_reportes" />
+
+    <item
+        android:id="@+id/navigation_ubicaciones"
+        android:icon="@drawable/baseline_location_pin_24"
+        android:title="@string/title_ubicaciones" />
+
+    <item
+        android:id="@+id/navigation_ajustes"
+        android:icon="@drawable/baseline_settings_24"
+        android:title="@string/title_ajustes" />
+
+</menu>

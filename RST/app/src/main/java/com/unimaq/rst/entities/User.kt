@@ -1,4 +1,7 @@
 package com.unimaq.rst.entities
 
-class User {
-}
+data class User (
+    val username: String,
+    val password: String,
+    val fullName: String
+)

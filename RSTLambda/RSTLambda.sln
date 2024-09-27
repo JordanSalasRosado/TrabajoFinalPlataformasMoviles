@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrearAtencion", "CrearAtencion\CrearAtencion.csproj", "{75D42D18-9CB3-4CB0-AAF9-76DB6CF91723}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Functions", "1. Functions", "{E06CF519-D204-42DA-9B57-C19A008C37E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Backend", "2. Backend", "{9D98166E-77A4-4BF0-A6C3-83F088BBCC2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RSTLambda.Entities", "RSTLambda.Entities\RSTLambda.Entities.csproj", "{9CD3A662-B314-4131-A890-D3F94A89F0D7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RSTLambda.Repositories", "RSTLambda.Repositories\RSTLambda.Repositories.csproj", "{5F51614B-AA14-4092-B015-7E701E38AA3F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListarAtencion", "ListarAtencion\ListarAtencion.csproj", "{ADC7B37B-BDC7-48EF-B0B6-5C50376D8525}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75D42D18-9CB3-4CB0-AAF9-76DB6CF91723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D42D18-9CB3-4CB0-AAF9-76DB6CF91723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D42D18-9CB3-4CB0-AAF9-76DB6CF91723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D42D18-9CB3-4CB0-AAF9-76DB6CF91723}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CD3A662-B314-4131-A890-D3F94A89F0D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD3A662-B314-4131-A890-D3F94A89F0D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD3A662-B314-4131-A890-D3F94A89F0D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD3A662-B314-4131-A890-D3F94A89F0D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F51614B-AA14-4092-B015-7E701E38AA3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F51614B-AA14-4092-B015-7E701E38AA3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F51614B-AA14-4092-B015-7E701E38AA3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F51614B-AA14-4092-B015-7E701E38AA3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADC7B37B-BDC7-48EF-B0B6-5C50376D8525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADC7B37B-BDC7-48EF-B0B6-5C50376D8525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADC7B37B-BDC7-48EF-B0B6-5C50376D8525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADC7B37B-BDC7-48EF-B0B6-5C50376D8525}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{75D42D18-9CB3-4CB0-AAF9-76DB6CF91723} = {E06CF519-D204-42DA-9B57-C19A008C37E5}
+		{9CD3A662-B314-4131-A890-D3F94A89F0D7} = {9D98166E-77A4-4BF0-A6C3-83F088BBCC2D}
+		{5F51614B-AA14-4092-B015-7E701E38AA3F} = {9D98166E-77A4-4BF0-A6C3-83F088BBCC2D}
+		{ADC7B37B-BDC7-48EF-B0B6-5C50376D8525} = {E06CF519-D204-42DA-9B57-C19A008C37E5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E884DA5-8C33-44CB-991D-6A4CC8BF9BC0}
+	EndGlobalSection
+EndGlobal
