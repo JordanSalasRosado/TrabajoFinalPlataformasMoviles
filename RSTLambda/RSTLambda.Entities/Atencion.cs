@@ -22,5 +22,6 @@
         public string MaquinariaMarca { get; set; }
         public string MaquinariaCategoria { get; set; }
         public string MaquinariaModelo { get; set; }
+        public string MaquinariaImagen { get; set; }
     }
 }

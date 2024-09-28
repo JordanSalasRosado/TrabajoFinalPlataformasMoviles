@@ -47,13 +47,13 @@ namespace RSTLambda.Repositories
             return entity;
         }
 
-        public Atencion? GetAtencion(long id)
+        public Atencion? ObtenerAtencion(long id)
         {
             SqlConnection? connection = null;
 
             using (connection = new SqlConnection(_connectionString))
             {
-                return connection.Query<Atencion>("usp_get_atencion", new { id = id }, commandType: CommandType.StoredProcedure).FirstOrDefault();
+                return connection.Query<Atencion>("usp_obtener_atencion", new { id }, commandType: CommandType.StoredProcedure).FirstOrDefault();
             }
         }
 

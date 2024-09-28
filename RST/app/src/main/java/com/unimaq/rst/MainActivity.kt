@@ -67,7 +67,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun buttonVerClick(view: View){
-        loadFragment(CrearReporteFragment())
+        val fragment = CrearReporteFragment()
+        val id = view.findViewById<View>(R.id.id).tag.toString()
+        val data = Bundle()
+        data.putLong("id", id.toLong())
+        fragment.arguments = data
+        loadFragment(fragment)
+
     }
 
     private fun loadFragment(fragment: Fragment) {

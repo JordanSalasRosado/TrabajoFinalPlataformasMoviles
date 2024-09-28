@@ -39,10 +39,10 @@
                 android:text="@string/nro_solicitud"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:labelFor="@id/text_numero_solicitud"/>
+                android:labelFor="@id/numero_solicitud"/>
 
             <EditText
-                android:id="@+id/text_numero_solicitud"
+                android:id="@+id/txt_numero_solicitud"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="20dp"
@@ -70,6 +70,7 @@
                 android:textStyle="bold"/>
 
             <EditText
+
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="20dp"
@@ -88,6 +89,7 @@
                 android:textStyle="bold"/>
 
             <EditText
+                android:id="@+id/txt_numero_serie"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="20dp"
@@ -106,6 +108,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/txt_anho_fabricacion"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="20dp"
@@ -131,6 +134,7 @@
                 android:layout_marginBottom="20dp">
 
                 <EditText
+                    android:id="@+id/txt_ultimo_mantenimiento"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="20dp"
@@ -159,6 +163,7 @@
                 android:textStyle="bold"/>
 
             <EditText
+                android:id="@+id/txt_horometro"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="20dp"
@@ -178,6 +183,7 @@
                 android:textStyle="bold"/>
 
             <EditText
+                android:id="@+id/txt_str_2"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="20dp"
@@ -202,6 +208,7 @@
                     android:layout_marginBottom="10dp">
 
                     <CheckBox
+                        android:id="@+id/chk_revision_hidraulica"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/revision_hidraulica"
@@ -228,6 +235,7 @@
                     android:layout_marginBottom="10dp">
 
                     <CheckBox
+                        android:id="@+id/chk_revision_aceite"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/revision_aceite"
@@ -254,6 +262,7 @@
                     android:layout_marginBottom="10dp">
 
                     <CheckBox
+                        android:id="@+id/chk_revision_calibracion"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/revision_calibracion"
@@ -280,6 +289,7 @@
                     android:layout_marginBottom="10dp">
 
                     <CheckBox
+                        android:id="@+id/chk_revision_neumaticos"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/revision_neumaticos"
@@ -309,6 +319,7 @@
                 android:textStyle="bold"/>
 
             <EditText
+                android:id="@+id/txt_observaciones"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="40dp"

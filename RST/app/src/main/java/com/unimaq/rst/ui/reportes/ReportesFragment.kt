@@ -39,18 +39,24 @@ class ReportesFragment : Fragment() {
 
         recyclerView = view.findViewById(R.id.recycler_view)
         adapter = ReportesAdapter(reportes)
+        activity?.let { adapter.constructor(it) }
         recyclerView.layoutManager = LinearLayoutManager(view.context)
-        recyclerView.addItemDecoration(DividerItemDecoration(view.context, DividerItemDecoration.VERTICAL))
+        recyclerView.addItemDecoration(
+            DividerItemDecoration(
+                view.context,
+                DividerItemDecoration.VERTICAL
+            )
+        )
         recyclerView.setAdapter(adapter)
 
-        cargarReportes()
+        cargarAtenciones()
     }
 
-    private fun cargarReportes(){
-        this.context?.let { AtencionProxy(it).listar("", { data -> cargarReportesCallback(data)}) }
+    private fun cargarAtenciones() {
+        this.context?.let { AtencionProxy(it).listar("") { data -> cargarAtencionesCallback(data) } }
     }
 
-    fun cargarReportesCallback(atenciones:MutableList<Atencion>){
+    fun cargarAtencionesCallback(atenciones: MutableList<Atencion>) {
         val total = view?.findViewById<TextView>(R.id.total)
         total?.text = atenciones.size.toString()
         reportes.addAll(atenciones)
@@ -59,7 +65,7 @@ class ReportesFragment : Fragment() {
 
     private fun setRegistrarAtencionOnClickListener(view: View) {
         val button = view.findViewById<Button>(R.id.button_registrar_atencion)
-        button?.setOnClickListener{
+        button?.setOnClickListener {
             loadFragment(CrearReporteFragment())
         }
     }

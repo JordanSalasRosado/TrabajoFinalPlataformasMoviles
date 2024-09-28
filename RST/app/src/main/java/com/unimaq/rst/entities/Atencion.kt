@@ -5,7 +5,7 @@ import java.util.Date
 data class Atencion (
     val id:Long,
     val numero_solicitud:String,
-    val id_maquinaria:String,
+    val id_maquinaria:Long,
     val numero_serie:String,
     val anho_fabricacion:String,
     val ultimo_mantenimiento:String,

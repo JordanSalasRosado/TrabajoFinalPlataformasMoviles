@@ -1,8 +1,8 @@
 USE [UnimaqRST]
 GO
 
-CREATE PROCEDURE usp_listar_atencion
-	@filter VARCHAR(100) = NULL
+CREATE PROCEDURE usp_obtener_atencion
+	@id BIGINT
 AS
 BEGIN
 
@@ -29,13 +29,6 @@ BEGIN
 		   ,m.imagen AS 'MaquinariaImagen'
 	FROM dbo.atencion a WITH(NOLOCK)
 	INNER JOIN dbo.maquinaria m WITH(NOLOCK) ON m.id = a.id_maquinaria
-	WHERE @filter IS NULL OR (
-		a.numero_solicitud LIKE '%'+ @filter +'%'
-		OR a.numero_serie LIKE '%'+ @filter +'%'
-		OR a.horometro LIKE '%'+ @filter +'%'
-		OR m.marca LIKE '%'+ @filter +'%'
-		OR m.categoria LIKE '%'+ @filter +'%'
-		OR m.modelo LIKE '%'+ @filter +'%'
-	)
+	WHERE a.id = @id
     
 END
