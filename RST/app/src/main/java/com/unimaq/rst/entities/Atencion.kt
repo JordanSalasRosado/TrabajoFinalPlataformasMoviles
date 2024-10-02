@@ -22,7 +22,8 @@ data class Atencion (
     val fecha_modificacion: String,
     val maquinaria_marca:String,
     val maquinaria_categoria:String,
-    val maquinaria_modelo:String
+    val maquinaria_modelo:String,
+    val maquinaria_imagen:String
 ){
     fun maquinaria():String{
         return "$maquinaria_marca - $maquinaria_categoria $maquinaria_modelo"

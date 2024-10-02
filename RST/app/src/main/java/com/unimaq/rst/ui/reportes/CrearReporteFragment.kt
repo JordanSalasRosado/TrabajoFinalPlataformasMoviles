@@ -1,6 +1,8 @@
 package com.unimaq.rst.ui.reportes
 
+import android.graphics.BitmapFactory
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -8,10 +10,12 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import com.unimaq.rst.R
 import com.unimaq.rst.entities.Atencion
 import com.unimaq.rst.proxies.AtencionProxy
+import java.net.URL
 
 class CrearReporteFragment : Fragment() {
 
@@ -50,7 +54,7 @@ class CrearReporteFragment : Fragment() {
             val anho_fabricacion = view.findViewById<EditText>(R.id.txt_anho_fabricacion)
             val ultimo_mantenimiento = view.findViewById<EditText>(R.id.txt_ultimo_mantenimiento)
             val horometro = view.findViewById<EditText>(R.id.txt_horometro)
-            val stir_2 = view.findViewById<EditText>(R.id.txt_str_2)
+            val stir_2 = view.findViewById<EditText>(R.id.txt_stir_2)
             val revision_hidraulica = view.findViewById<CheckBox>(R.id.chk_revision_hidraulica)
             val revision_aceite = view.findViewById<CheckBox>(R.id.chk_revision_aceite)
             val revision_calibracion = view.findViewById<CheckBox>(R.id.chk_revision_calibracion)
@@ -63,6 +67,7 @@ class CrearReporteFragment : Fragment() {
             val maquinaria_marca = ""
             val maquinaria_categoria = ""
             val maquinaria_modelo = ""
+            val maquinaria_imagen = ""
 
             var atencion = Atencion(
                 0,
@@ -84,7 +89,8 @@ class CrearReporteFragment : Fragment() {
                 fecha_modificacion,
                 maquinaria_marca,
                 maquinaria_categoria,
-                maquinaria_modelo
+                maquinaria_modelo,
+                maquinaria_imagen
             )
 
             this.context?.let { AtencionProxy(it).guardar(atencion) }
@@ -95,9 +101,25 @@ class CrearReporteFragment : Fragment() {
         this.context?.let { AtencionProxy(it).obtener(id) { data -> cargarAtencionCallback(data) } }
     }
 
-    fun cargarAtencionCallback(atencion: Atencion) {
+    private fun cargarAtencionCallback(atencion: Atencion) {
         view?.findViewById<TextView>(R.id.txt_numero_solicitud)?.text = atencion.numero_solicitud
         view?.findViewById<TextView>(R.id.txt_numero_serie)?.text = atencion.numero_serie
         view?.findViewById<TextView>(R.id.txt_anho_fabricacion)?.text = atencion.anho_fabricacion
+        view?.findViewById<TextView>(R.id.txt_ultimo_mantenimiento)?.text = atencion.ultimo_mantenimiento
+        view?.findViewById<TextView>(R.id.txt_horometro)?.text = atencion.horometro
+        view?.findViewById<TextView>(R.id.txt_stir_2)?.text = atencion.stir_2
+        view?.findViewById<CheckBox>(R.id.chk_revision_hidraulica)?.isChecked = atencion.revision_hidraulica
+        view?.findViewById<CheckBox>(R.id.chk_revision_aceite)?.isChecked = atencion.revision_aceite
+        view?.findViewById<CheckBox>(R.id.chk_revision_calibracion)?.isChecked = atencion.revision_calibracion
+        view?.findViewById<CheckBox>(R.id.chk_revision_neumaticos)?.isChecked = atencion.revision_neumaticos
+        view?.findViewById<TextView>(R.id.txt_observaciones)?.text = atencion.observaciones
+        val url = URL(atencion.maquinaria_imagen)
+        try {
+            val image = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+            view?.findViewById<ImageView>(R.id.img_maquinaria)?.setImageBitmap(image)
+        }
+       catch (ex: Exception){
+           Log.i("======>", ex.message.toString())
+       }
     }
 }

@@ -55,7 +55,8 @@ class AtencionProxy {
                                 obj.getString("FechaModificacion"),
                                 obj.getString("MaquinariaMarca"),
                                 obj.getString("MaquinariaCategoria"),
-                                obj.getString("MaquinariaModelo")
+                                obj.getString("MaquinariaModelo"),
+                                obj.getString("MaquinariaImagen")
                             )
                         )
                     }
@@ -103,7 +104,8 @@ class AtencionProxy {
                         response.getString("FechaModificacion"),
                         response.getString("MaquinariaMarca"),
                         response.getString("MaquinariaCategoria"),
-                        response.getString("MaquinariaModelo")
+                        response.getString("MaquinariaModelo"),
+                        response.getString("MaquinariaImagen")
                     )
 
                     callback(obj)

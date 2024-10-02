@@ -53,6 +53,7 @@
                 android:autofillHints=""/>
 
             <ImageView
+                android:id="@+id/img_maquinaria"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -183,7 +184,7 @@
                 android:textStyle="bold"/>
 
             <EditText
-                android:id="@+id/txt_str_2"
+                android:id="@+id/txt_stir_2"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="20dp"
