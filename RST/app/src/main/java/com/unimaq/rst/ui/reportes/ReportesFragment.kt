@@ -5,14 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.Spinner
 import android.widget.TextView
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.unimaq.rst.R
 import com.unimaq.rst.entities.Atencion
+import com.unimaq.rst.entities.Maquinaria
 import com.unimaq.rst.proxies.AtencionProxy
+import com.unimaq.rst.proxies.MaquinariaProxy
 
 class ReportesFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView

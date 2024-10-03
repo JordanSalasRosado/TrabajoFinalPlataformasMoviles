@@ -12,12 +12,11 @@
         android:visibility="gone" />
 
     <ImageView
-        android:id="@+id/profileImage"
+        android:id="@+id/img_maquinaria"
         android:layout_width="60dp"
         android:layout_height="70dp"
         android:layout_marginEnd="15dp"
         android:contentDescription="@string/empty_text"
-        app:srcCompat="@drawable/unimaq_logo"
         android:layout_gravity="center_vertical"/>
 
     <LinearLayout
