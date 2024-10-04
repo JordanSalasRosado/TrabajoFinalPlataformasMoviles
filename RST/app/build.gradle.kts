@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin)
 }
 
 android {
@@ -56,4 +57,5 @@ dependencies {
 
     implementation ("com.amazonaws:aws-android-sdk-s3:2.16.+")
     implementation ("com.amazonaws:aws-android-sdk-mobile-client:2.16.+") { isTransitive = true }
+    implementation("com.google.android.gms:play-services-maps:19.0.0")
 }
