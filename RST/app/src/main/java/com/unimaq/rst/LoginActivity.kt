@@ -20,9 +20,11 @@ class LoginActivity : AppCompatActivity() {
         "U202018455@upc.edu.pe" to
                 User("U202018455@upc.edu.pe","12345","Cristhian Huamaní Murrieta"),
         "u201824058@upc.edu.pe" to
+                User("u202013797@upc.edu.pe","12345","Jordan Martin Lian Salas Rosado"),
+        "u201824058@upc.edu.pe" to
                 User("u201824058@upc.edu.pe","12345","Angel Paolo Livia Rivas"),
         "" to
-                User("","","Javier Huiza")
+                User("u201021101@upc.edu.pe","","Victor Renzo Cisneros")
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

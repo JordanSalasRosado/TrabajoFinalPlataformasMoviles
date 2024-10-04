@@ -15,6 +15,8 @@ class StartActivity : AppCompatActivity() {
 
         if (isLogged) {
             val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("username", intent.getStringExtra("username"))
+            intent.putExtra("fullName", intent.getStringExtra("fullName"))
             startActivity(intent)
         } else {
             val intent = Intent(this, LoginActivity::class.java)
