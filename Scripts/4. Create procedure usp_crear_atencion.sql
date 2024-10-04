@@ -6,7 +6,6 @@ CREATE PROCEDURE usp_crear_atencion
 	@id_maquinaria BIGINT,
 	@numero_serie VARCHAR(50),
 	@anho_fabricacion INT,
-	@ultimo_mantenimiento DATETIME,
 	@horometro VARCHAR(100),
 	@stir_2 VARCHAR(100),
 	@revision_hidraulica BIT,
@@ -26,7 +25,6 @@ BEGIN
            ,[id_maquinaria]
            ,[numero_serie]
            ,[anho_fabricacion]
-           ,[ultimo_mantenimiento]
            ,[horometro]
            ,[stir_2]
            ,[revision_hidraulica]
@@ -43,7 +41,6 @@ BEGIN
 		   @id_maquinaria, 
 		   @numero_serie,
 		   @anho_fabricacion,
-		   @ultimo_mantenimiento,
 		   @horometro,
 		   @stir_2,
 		   @revision_hidraulica,

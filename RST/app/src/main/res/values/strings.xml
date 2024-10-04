@@ -41,4 +41,5 @@
     <string name="ingrese_observaciones_hint">Observaciones Generales</string>
     <string name="firma_tecnico">Firma Técnico</string>
     <string name="firma_supervisor">Firma Supervisor</string>
+
 </resources>

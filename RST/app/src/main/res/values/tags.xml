@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item type="id" name="tag_revision_hidraulica" />
+    <item type="id" name="tag_revision_aceite" />
+    <item type="id" name="tag_revision_calibracion" />
+    <item type="id" name="tag_revision_neumaticos" />
 </resources>

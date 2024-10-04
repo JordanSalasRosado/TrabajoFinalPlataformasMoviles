@@ -11,7 +11,6 @@ BEGIN
            ,[id_maquinaria] AS 'IdMaquinaria'
            ,[numero_serie] AS 'NumeroSerie'
            ,[anho_fabricacion] AS 'AnhoFabricacion'
-           ,CONVERT (VARCHAR, ultimo_mantenimiento, 103) AS 'UltimoMantenimiento'
            ,[horometro] AS 'Horometro'
            ,[stir_2] AS 'Stir2'
            ,[revision_hidraulica] AS 'RevisionHidraulica'

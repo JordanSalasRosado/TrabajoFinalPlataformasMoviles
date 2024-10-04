@@ -43,7 +43,7 @@ class ReportesAdapter(private val reportes: List<Atencion>) :
         holder.id.tag = obj.id
         holder.numero_solicitud.text = obj.numero_solicitud
         holder.maquinaria.text = obj.maquinaria()
-        holder.ultimo_mantenimiento.text = obj.ultimo_mantenimiento
+        holder.ultimo_mantenimiento.text = obj.fecha_creacion_formato
         loadImage(holder,holder.img_maquinaria.id, obj.maquinaria_imagen)
         holder.button_ver.setOnClickListener {
             val fragment = CrearReporteFragment()

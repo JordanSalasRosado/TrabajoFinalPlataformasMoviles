@@ -3,12 +3,11 @@ package com.unimaq.rst.entities
 import java.util.Date
 
 data class Atencion (
-    val id:Long,
+    var id:Long,
     val numero_solicitud:String,
     val id_maquinaria:Long,
     val numero_serie:String,
-    val anho_fabricacion:String,
-    val ultimo_mantenimiento:String,
+    val anho_fabricacion:Int,
     val horometro:String,
     val stir_2:String,
     val revision_hidraulica:Boolean,
@@ -23,7 +22,8 @@ data class Atencion (
     val maquinaria_marca:String,
     val maquinaria_categoria:String,
     val maquinaria_modelo:String,
-    val maquinaria_imagen:String
+    val maquinaria_imagen:String,
+    val fecha_creacion_formato:String
 ){
     fun maquinaria():String{
         return "$maquinaria_marca - $maquinaria_categoria $maquinaria_modelo"

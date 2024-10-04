@@ -1,21 +1,21 @@
 package com.unimaq.rst
 
-import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
-import android.widget.Button
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.unimaq.rst.databinding.ActivityMainBinding
 import com.unimaq.rst.ui.ajustes.AjustesFragment
 import com.unimaq.rst.ui.reportes.CrearReporteFragment
 import com.unimaq.rst.ui.reportes.ReportesFragment
 import com.unimaq.rst.ui.ubicaciones.UbicacionesFragment
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -80,5 +80,12 @@ class MainActivity : AppCompatActivity() {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.nav_host_fragment_activity_main, fragment)
         transaction.commit()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> loadFragment(ReportesFragment())
+        }
+        return true
     }
 }

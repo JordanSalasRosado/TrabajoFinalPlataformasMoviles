@@ -2,6 +2,7 @@ package com.unimaq.rst.proxies
 
 import android.content.Context
 import android.util.Log
+import android.widget.Toast
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.VolleyError
@@ -13,13 +14,13 @@ import org.json.JSONException
 import org.json.JSONObject
 
 class AtencionProxy {
-    private var _context:Context
+    private var _context: Context
 
-    constructor(context:Context){
+    constructor(context: Context) {
         _context = context
     }
 
-    fun listar(filter: String , callback:(MutableList<Atencion>)-> Unit) {
+    fun listar(filter: String, callback: (MutableList<Atencion>) -> Unit) {
         val url =
             "https://9hflljc5yc.execute-api.us-east-2.amazonaws.com/default/atencion/listar?filter=$filter"
 
@@ -40,8 +41,7 @@ class AtencionProxy {
                                 obj.getString("NumeroSolicitud"),
                                 obj.getLong("IdMaquinaria"),
                                 obj.getString("NumeroSerie"),
-                                obj.getString("AnhoFabricacion"),
-                                obj.getString("UltimoMantenimiento"),
+                                obj.getInt("AnhoFabricacion"),
                                 obj.getString("Horometro"),
                                 obj.getString("Stir2"),
                                 obj.getBoolean("RevisionHidraulica"),
@@ -56,7 +56,8 @@ class AtencionProxy {
                                 obj.getString("MaquinariaMarca"),
                                 obj.getString("MaquinariaCategoria"),
                                 obj.getString("MaquinariaModelo"),
-                                obj.getString("MaquinariaImagen")
+                                obj.getString("MaquinariaImagen"),
+                                obj.getString("FechaCreacionFormato")
                             )
                         )
                     }
@@ -66,7 +67,7 @@ class AtencionProxy {
                     Log.i("======>", "Error:")
                     Log.i("======>", e.message.toString())
                 }
-            }, {error->
+            }, { error ->
                 Log.i("======>", error.toString())
             })
 
@@ -74,7 +75,7 @@ class AtencionProxy {
         requestQueue.add(stringRequest)
     }
 
-    fun obtener(id: Long , callback:(Atencion)-> Unit) {
+    fun obtener(id: Long, callback: (Atencion) -> Unit) {
         val url =
             "https://9hflljc5yc.execute-api.us-east-2.amazonaws.com/default/atencion/obtener?id=$id"
 
@@ -89,8 +90,7 @@ class AtencionProxy {
                         response.getString("NumeroSolicitud"),
                         response.getLong("IdMaquinaria"),
                         response.getString("NumeroSerie"),
-                        response.getString("AnhoFabricacion"),
-                        response.getString("UltimoMantenimiento"),
+                        response.getInt("AnhoFabricacion"),
                         response.getString("Horometro"),
                         response.getString("Stir2"),
                         response.getBoolean("RevisionHidraulica"),
@@ -105,7 +105,8 @@ class AtencionProxy {
                         response.getString("MaquinariaMarca"),
                         response.getString("MaquinariaCategoria"),
                         response.getString("MaquinariaModelo"),
-                        response.getString("MaquinariaImagen")
+                        response.getString("MaquinariaImagen"),
+                        response.getString("FechaCreacionFormato")
                     )
 
                     callback(obj)
@@ -113,7 +114,7 @@ class AtencionProxy {
                     Log.i("======>", "Error:")
                     Log.i("======>", e.message.toString())
                 }
-            }, {error->
+            }, { error ->
                 Log.i("======>", error.toString())
             })
 
@@ -121,41 +122,70 @@ class AtencionProxy {
         requestQueue.add(stringRequest)
     }
 
-    fun guardar(obj:Atencion){
+    fun guardar(obj: Atencion, callback: (Atencion) -> Unit) {
         var url = "https://9hflljc5yc.execute-api.us-east-2.amazonaws.com/default/atencion"
 
         val jsonObject = JSONObject()
 
         try {
-               jsonObject.put("NumeroSolicitud",obj.numero_solicitud)
-            jsonObject.put("IdMaquinaria",obj.id_maquinaria)
-            jsonObject.put("NumeroSerie",obj.numero_serie)
-            jsonObject.put("AnhoFabricacion",obj.anho_fabricacion)
-            jsonObject.put("UltimoMantenimiento",obj.ultimo_mantenimiento)
-            jsonObject.put("Horometro",obj.horometro)
-            jsonObject.put("Stir2",obj.stir_2)
-            jsonObject.put("RevisionHidraulica",obj.revision_hidraulica)
-            jsonObject.put("RevisionAceite",obj.revision_aceite)
-            jsonObject.put("RevisionCalibracion",obj.revision_calibracion)
-            jsonObject.put("RevisionNeumaticos",obj.revision_neumaticos)
-            jsonObject.put("Observaciones",obj.observaciones)
-            jsonObject.put("FirmaTecnico",obj.firma_tecnico)
-            jsonObject.put("FirmaSupervisor",obj.firma_supervisor)
+            jsonObject.put("NumeroSolicitud", obj.numero_solicitud)
+            jsonObject.put("IdMaquinaria", obj.id_maquinaria)
+            jsonObject.put("NumeroSerie", obj.numero_serie)
+            jsonObject.put("AnhoFabricacion", obj.anho_fabricacion)
+            jsonObject.put("Horometro", obj.horometro)
+            jsonObject.put("Stir2", obj.stir_2)
+            jsonObject.put("RevisionHidraulica", obj.revision_hidraulica)
+            jsonObject.put("RevisionAceite", obj.revision_aceite)
+            jsonObject.put("RevisionCalibracion", obj.revision_calibracion)
+            jsonObject.put("RevisionNeumaticos", obj.revision_neumaticos)
+            jsonObject.put("Observaciones", obj.observaciones)
+            jsonObject.put("FirmaTecnico", obj.firma_tecnico)
+            jsonObject.put("FirmaSupervisor", obj.firma_supervisor)
+
+            val method: Int = if (obj.id > 0) Request.Method.PUT else Request.Method.POST
+
 
             val jsonObjReq = object : JsonObjectRequest(
-                Request.Method.POST, url, jsonObject,
+                method, url, jsonObject,
                 Response.Listener { response ->
                     Log.i("======>", "Exito")
+
+                    val obj = Atencion(
+                        response.getLong("Id"),
+                        response.getString("NumeroSolicitud"),
+                        response.getLong("IdMaquinaria"),
+                        response.getString("NumeroSerie"),
+                        response.getInt("AnhoFabricacion"),
+                        response.getString("Horometro"),
+                        response.getString("Stir2"),
+                        response.getBoolean("RevisionHidraulica"),
+                        response.getBoolean("RevisionAceite"),
+                        response.getBoolean("RevisionCalibracion"),
+                        response.getBoolean("RevisionNeumaticos"),
+                        response.getString("Observaciones"),
+                        response.getString("FirmaTecnico"),
+                        response.getString("FirmaSupervisor"),
+                        response.getString("FechaCreacion"),
+                        response.getString("FechaModificacion"),
+                        response.getString("MaquinariaMarca"),
+                        response.getString("MaquinariaCategoria"),
+                        response.getString("MaquinariaModelo"),
+                        response.getString("MaquinariaImagen"),
+                        response.getString("FechaCreacionFormato")
+                    )
+
+                    callback(obj)
                 },
                 Response.ErrorListener { error: VolleyError ->
                     Log.i("======>", error.message ?: "VolleyError occurred")
+                    Toast.makeText(_context, "Ocurrió un error", Toast.LENGTH_LONG).show()
                 }) {}
 
             val requestQueue = Volley.newRequestQueue(_context)
             requestQueue.add(jsonObjReq)
 
 
-        }catch (e: JSONException) {
+        } catch (e: JSONException) {
             Log.i("======>", e.message ?: "JSONException occurred")
         }
     }

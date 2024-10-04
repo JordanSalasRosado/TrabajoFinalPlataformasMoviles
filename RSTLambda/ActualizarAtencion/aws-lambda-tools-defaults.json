@@ -13,15 +13,14 @@
     "function-runtime"      : "dotnet8",
     "function-memory-size"  : 512,
     "function-timeout"      : 30,
-    "function-handler"      : "ObtenerAtencion::ObtenerAtencion.Function::FunctionHandler",
+    "function-handler"      : "ActualizarAtencion::ActualizarAtencion.Function::FunctionHandler",
     "framework"             : "net8.0",
-    "function-name"         : "ObtenerAtencion",
+    "function-name"         : "ActualizarAtencion",
     "package-type"          : "Zip",
     "function-role"         : "arn:aws:iam::571600842976:role/lambda_exec_ListarAtenciones",
     "function-subnets"      : "subnet-006fd90a9ae9bfebc,subnet-0aed13bac26956778,subnet-0e0fbe7b94921a5a3",
     "function-security-groups" : "sg-01b7c88db2bfd482f",
     "tracing-mode"             : "PassThrough",
     "environment-variables"    : "",
-    "image-tag"                : "",
-    "function-description"     : ""
+    "image-tag"                : ""
 }

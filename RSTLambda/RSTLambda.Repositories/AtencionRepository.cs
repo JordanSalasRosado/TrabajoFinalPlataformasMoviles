@@ -28,7 +28,6 @@ namespace RSTLambda.Repositories
                         id_maquinaria = entity.IdMaquinaria,
                         numero_serie = entity.NumeroSerie,
                         anho_fabricacion = entity.AnhoFabricacion,
-                        ultimo_mantenimiento = entity.UltimoMantenimiento,
                         horometro = entity.Horometro,
                         stir_2 = entity.Stir2,
                         revision_hidraulica = entity.RevisionHidraulica,
@@ -42,6 +41,36 @@ namespace RSTLambda.Repositories
                     commandType: CommandType.StoredProcedure);
 
                 entity.Id = id;
+
+                entity = ObtenerAtencion(id);
+            }
+
+            return entity;
+        }
+
+        public Atencion ActualizarAtencion(Atencion entity)
+        {
+            SqlConnection? connection = null;
+
+            using (connection = new SqlConnection(_connectionString))
+            {
+                var id = connection.QuerySingle<long>("usp_actualizar_atencion",
+                    new
+                    {
+                        id = entity.Id,
+                        numero_solicitud = entity.NumeroSolicitud,
+                        id_maquinaria = entity.IdMaquinaria,
+                        numero_serie = entity.NumeroSerie,
+                        anho_fabricacion = entity.AnhoFabricacion,
+                        horometro = entity.Horometro,
+                        stir_2 = entity.Stir2,                    
+                        observaciones = entity.Observaciones
+                    },
+                    commandType: CommandType.StoredProcedure);
+
+                entity.Id = id;
+
+                entity = ObtenerAtencion(id);
             }
 
             return entity;

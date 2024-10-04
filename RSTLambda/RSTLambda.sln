@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Maquinaria", "Maquinaria", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListarMaquinaria", "ListarMaquinaria\ListarMaquinaria.csproj", "{A426DB93-289C-4EBE-8572-9697C972291A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActualizarAtencion", "ActualizarAtencion\ActualizarAtencion.csproj", "{B1FDB719-6DA2-4517-9CAC-06D327E5B2ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{A426DB93-289C-4EBE-8572-9697C972291A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A426DB93-289C-4EBE-8572-9697C972291A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A426DB93-289C-4EBE-8572-9697C972291A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1FDB719-6DA2-4517-9CAC-06D327E5B2ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1FDB719-6DA2-4517-9CAC-06D327E5B2ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1FDB719-6DA2-4517-9CAC-06D327E5B2ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1FDB719-6DA2-4517-9CAC-06D327E5B2ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +72,7 @@ Global
 		{FAEFF658-DA1D-4A42-9CB5-AF1102FD2597} = {E06CF519-D204-42DA-9B57-C19A008C37E5}
 		{7A11526D-F6B8-4300-873E-04346311D4C7} = {E06CF519-D204-42DA-9B57-C19A008C37E5}
 		{A426DB93-289C-4EBE-8572-9697C972291A} = {7A11526D-F6B8-4300-873E-04346311D4C7}
+		{B1FDB719-6DA2-4517-9CAC-06D327E5B2ED} = {FAEFF658-DA1D-4A42-9CB5-AF1102FD2597}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1E884DA5-8C33-44CB-991D-6A4CC8BF9BC0}

@@ -7,7 +7,6 @@
         public long IdMaquinaria { get; set; }
         public string NumeroSerie { get; set; }
         public int AnhoFabricacion { get; set; }
-        public string UltimoMantenimiento { get; set; }
         public string Horometro { get; set; }
         public string Stir2 { get; set; }
         public bool RevisionHidraulica { get; set; }
@@ -18,6 +17,7 @@
         public string FirmaTecnico { get; set; }
         public string FirmaSupervisor { get; set; }
         public DateTime FechaCreacion { get; set; }
+        public string FechaCreacionFormato { get { return FechaCreacion.ToString("dd/MM/yyyy"); } }
         public DateTime FechaModificacion { get; set; }
         public string MaquinariaMarca { get; set; }
         public string MaquinariaCategoria { get; set; }

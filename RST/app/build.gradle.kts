@@ -53,4 +53,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("com.android.volley:volley:1.2.1")
+
+    implementation ("com.amazonaws:aws-android-sdk-s3:2.16.+")
+    implementation ("com.amazonaws:aws-android-sdk-mobile-client:2.16.+") { isTransitive = true }
 }
